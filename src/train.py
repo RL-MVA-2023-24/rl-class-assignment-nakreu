@@ -12,7 +12,7 @@ import random
 import numpy as np
 from copy import deepcopy
 import os
-from tqdm.auto import tqdm
+#from tqdm.auto import tqdm
 from gymnasium.wrappers import TimeLimit
 
 def greedy_action(network, state):
@@ -254,7 +254,7 @@ class ProjectAgent:
 def fill_buffer(env, agent, buffer_size):
     state, _ = env.reset()
     print("Fill up memory")
-    for i in tqdm(range(buffer_size)):
+    for i in range(buffer_size):
         action = agent.act(state)
         next_state, reward, done, trunc, _ = env.step(action)
         agent.memory.append(state, action, reward, next_state, done)
