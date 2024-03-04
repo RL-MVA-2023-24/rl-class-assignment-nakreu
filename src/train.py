@@ -246,7 +246,7 @@ class ProjectAgent:
         pass
 
     def load(self):
-        path = os.getcwd() + "/src/dqn_agent_2.pth"
+        path = os.getcwd() + "/src/dqn_agent_3.pth"
         self.dqn_agent.load(path)
 
 
